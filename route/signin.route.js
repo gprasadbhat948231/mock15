@@ -9,7 +9,7 @@ const userRoute=express.Router()
 userRoute.post("/register",async(req,res)=>{
     const {fullname,email,password}=req.body;
     try{
-        bcrypt.hash(password,9,async(err,passowrd)=>{
+        bcrypt.hash(password,9,async(err,password)=>{
             if(err){
                 console.log(err)
             }
